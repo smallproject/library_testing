@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApplication1.Local;
 
 namespace ConsoleApplication1
 {
@@ -31,6 +33,33 @@ namespace ConsoleApplication1
 
         static SQL_experiments sqlcode = new SQL_experiments();
         static void Main(string[] args)
+        {
+
+            try
+            {
+                string url = "http://www.google.com";
+                //classProcess classProcess = new classProcess();
+                //classProcess.OpenWithStartInfo(url);
+
+                //var locate = System.Diagnostics.Process.Start("calc");
+                //locate.Close();
+                //string fullpath = locate.Modules[0].FileName;
+                //Console.WriteLine(fullpath);
+
+                string App = "calc";
+                PrintProcessClass printclass = new PrintProcessClass();
+                printclass.StartHere(App);
+
+            }
+            catch (Exception msg)
+            {
+                Console.WriteLine(msg.Message);
+            }
+
+            Console.ReadLine();
+        }
+
+        static void test2()
         {
             sqlcode.Id = 1;
             sqlcode.AccountId = "USER001";
