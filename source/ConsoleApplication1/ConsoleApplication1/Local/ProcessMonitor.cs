@@ -9,59 +9,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.Local
 {
-    class classProcess
-    {
-        public void OpenApplication(string url)
-        {
-            Process.Start("IExplore.exe", url);
-        }
-
-        public void OpenWithArgument(string url)
-        {
-            Process.Start("IExplorer.exe", url);
-        }
-
-        public void OpenWithStartInfo(string url)
-        {
-            try
-            {
-                ProcessStartInfo startInfo = new ProcessStartInfo("IExplorer.exe");
-                startInfo.WindowStyle = ProcessWindowStyle.Maximized;
-
-                Process.Start(startInfo);
-
-                startInfo.Arguments = url;
-                Process.Start(startInfo);
-            }
-            catch (Exception msg)
-            {
-                Console.WriteLine(msg.Message);
-            }
-
-        }
-    }
-
-    class PrintProcessClass
+    internal class ProcessMonitor
     {
         private Process myProcess = new Process();
         private int elapsedTime;
         private bool eventHandled;
 
-        public void PrintDoc(string fileName)
+        public ProcessMonitor(string url, out bool status)
         {
             elapsedTime = 0;
             eventHandled = false;
 
-            string fullpath = "";
             try
             {
-                //Process process = new Process();
-                //process = Process.Start("IExplore.exe");
-                //fullpath = process.Modules[0].FileName;
-                //process.Kill();
-
                 myProcess.StartInfo.FileName = "iexplore";
-                //myProcess.StartInfo.Verb = "Print";
+                myProcess.StartInfo.Arguments = "-noframemerging " + url;
                 myProcess.StartInfo.CreateNoWindow = true;
                 myProcess.EnableRaisingEvents = true;
                 myProcess.Exited += new EventHandler(myPorcess_Exited);
@@ -69,8 +31,7 @@ namespace ConsoleApplication1.Local
             }
             catch (Win32Exception msg)
             {
-                Console.WriteLine("An error occurred trying to print \"{0}\":" + "\n" + msg.Message, fullpath);
-                return;
+                Console.WriteLine("An error occurred trying to print \"{0}\":" + "\n" + msg.Message);
             }
 
             const int SLEEP_AMOUNT = 100;
@@ -83,6 +44,8 @@ namespace ConsoleApplication1.Local
                 }
                 Thread.Sleep(SLEEP_AMOUNT);
             }
+
+            status = eventHandled;
         }
 
         private void myPorcess_Exited(object sender, System.EventArgs e)
@@ -91,12 +54,6 @@ namespace ConsoleApplication1.Local
             Console.WriteLine("Exit time:    {0}\r\n" +
                               "Exit code:    {1}\r\nElapsed time: {2}", myProcess.ExitTime, myProcess.ExitCode,
                 elapsedTime);
-        }
-
-        public void StartHere(string args)
-        {
-            PrintProcessClass myPrintProcess = new PrintProcessClass();
-            myPrintProcess.PrintDoc(args);
         }
     }
 }

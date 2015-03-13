@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -38,17 +39,55 @@ namespace ConsoleApplication1
             try
             {
                 string url = "http://www.google.com";
+                bool status;
                 //classProcess classProcess = new classProcess();
                 //classProcess.OpenWithStartInfo(url);
+
+                ProcessMonitor monitor = new ProcessMonitor(url, out status);
+
+                Console.WriteLine(status);
 
                 //var locate = System.Diagnostics.Process.Start("calc");
                 //locate.Close();
                 //string fullpath = locate.Modules[0].FileName;
                 //Console.WriteLine(fullpath);
 
-                string App = "calc";
-                PrintProcessClass printclass = new PrintProcessClass();
-                printclass.StartHere(App);
+                //string App = "calc";
+                //PrintProcessClass printclass = new PrintProcessClass();
+                //printclass.StartHere(App);
+
+                //Process process = new Process();
+                //process = Process.Start("iexplore");
+                //string fullpath = process.Modules[0].FileName;
+                //string version = process.MainModule.FileVersionInfo.FileVersion;
+                //process.Kill();
+
+                //Console.WriteLine(fullpath);
+                //Console.WriteLine(version);
+
+
+                //var id = process.Id;
+                //var MachineName = process.MachineName;
+                //var filename = process.MainModule.FileName;
+
+                //Console.WriteLine(id);
+                //Console.WriteLine(MachineName);
+                //Console.WriteLine(filename);
+                //Process myProcess = new Process();
+                //myProcess.StartInfo.FileName = fullpath;
+                //myProcess.StartInfo.Verb = "Print";
+                //myProcess.StartInfo.CreateNoWindow = true;
+                //myProcess.EnableRaisingEvents = true;
+                //myProcess.Start();
+
+                //Process process = new Process();
+                //process = Process.Start("calc");
+                //string fullpath = process.Modules[0].FileName;
+
+                //string processid = process.Id.ToString();
+                //process.Kill();
+                //Console.WriteLine(fullpath);
+                //Console.WriteLine(processid);
 
             }
             catch (Exception msg)
