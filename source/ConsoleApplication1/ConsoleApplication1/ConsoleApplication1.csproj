@@ -46,10 +46,11 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Local\classProcess.cs" />
+    <Compile Include="Local\listenum_class.cs" />
     <Compile Include="Local\ProcessMonitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQL_experiments.cs" />
+    <Compile Include="Database\SQL_experiments.cs" />
     <Compile Include="Web\Web.cs" />
   </ItemGroup>
   <ItemGroup>

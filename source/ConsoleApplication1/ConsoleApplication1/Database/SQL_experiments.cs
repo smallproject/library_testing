@@ -34,5 +34,22 @@ namespace ConsoleApplication1
 
             Console.WriteLine(command.CommandText);
         }
+
+        public void main()
+        {
+            try
+            {
+                Program program = new Program();
+                var obj = program;
+
+                Console.WriteLine(obj.GetType());
+            }
+            catch (Exception msg)
+            {
+                Console.WriteLine(msg.Message);
+            }
+
+            Console.ReadLine();
+        }
     }
 }

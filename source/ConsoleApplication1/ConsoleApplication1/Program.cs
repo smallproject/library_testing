@@ -35,67 +35,63 @@ namespace ConsoleApplication1
         static SQL_experiments sqlcode = new SQL_experiments();
         static void Main(string[] args)
         {
+            listenum_class minormain = new listenum_class();
+            minormain.main();
+        }
 
-            try
-            {
-                string url = "http://www.google.com";
-                bool status;
-                //classProcess classProcess = new classProcess();
-                //classProcess.OpenWithStartInfo(url);
+        static void test3()
+        {
 
-                ProcessMonitor monitor = new ProcessMonitor(url, out status);
+            string url = "http://www.google.com";
+            bool status;
+            //classProcess classProcess = new classProcess();
+            //classProcess.OpenWithStartInfo(url);
 
-                Console.WriteLine(status);
+            ProcessMonitor monitor = new ProcessMonitor(url, out status);
 
-                //var locate = System.Diagnostics.Process.Start("calc");
-                //locate.Close();
-                //string fullpath = locate.Modules[0].FileName;
-                //Console.WriteLine(fullpath);
+            Console.WriteLine(status);
 
-                //string App = "calc";
-                //PrintProcessClass printclass = new PrintProcessClass();
-                //printclass.StartHere(App);
+            //var locate = System.Diagnostics.Process.Start("calc");
+            //locate.Close();
+            //string fullpath = locate.Modules[0].FileName;
+            //Console.WriteLine(fullpath);
 
-                //Process process = new Process();
-                //process = Process.Start("iexplore");
-                //string fullpath = process.Modules[0].FileName;
-                //string version = process.MainModule.FileVersionInfo.FileVersion;
-                //process.Kill();
+            //string App = "calc";
+            //PrintProcessClass printclass = new PrintProcessClass();
+            //printclass.StartHere(App);
 
-                //Console.WriteLine(fullpath);
-                //Console.WriteLine(version);
+            //Process process = new Process();
+            //process = Process.Start("iexplore");
+            //string fullpath = process.Modules[0].FileName;
+            //string version = process.MainModule.FileVersionInfo.FileVersion;
+            //process.Kill();
+
+            //Console.WriteLine(fullpath);
+            //Console.WriteLine(version);
 
 
-                //var id = process.Id;
-                //var MachineName = process.MachineName;
-                //var filename = process.MainModule.FileName;
+            //var id = process.Id;
+            //var MachineName = process.MachineName;
+            //var filename = process.MainModule.FileName;
 
-                //Console.WriteLine(id);
-                //Console.WriteLine(MachineName);
-                //Console.WriteLine(filename);
-                //Process myProcess = new Process();
-                //myProcess.StartInfo.FileName = fullpath;
-                //myProcess.StartInfo.Verb = "Print";
-                //myProcess.StartInfo.CreateNoWindow = true;
-                //myProcess.EnableRaisingEvents = true;
-                //myProcess.Start();
+            //Console.WriteLine(id);
+            //Console.WriteLine(MachineName);
+            //Console.WriteLine(filename);
+            //Process myProcess = new Process();
+            //myProcess.StartInfo.FileName = fullpath;
+            //myProcess.StartInfo.Verb = "Print";
+            //myProcess.StartInfo.CreateNoWindow = true;
+            //myProcess.EnableRaisingEvents = true;
+            //myProcess.Start();
 
-                //Process process = new Process();
-                //process = Process.Start("calc");
-                //string fullpath = process.Modules[0].FileName;
+            //Process process = new Process();
+            //process = Process.Start("calc");
+            //string fullpath = process.Modules[0].FileName;
 
-                //string processid = process.Id.ToString();
-                //process.Kill();
-                //Console.WriteLine(fullpath);
-                //Console.WriteLine(processid);
-
-            }
-            catch (Exception msg)
-            {
-                Console.WriteLine(msg.Message);
-            }
-
-            Console.ReadLine();
+            //string processid = process.Id.ToString();
+            //process.Kill();
+            //Console.WriteLine(fullpath);
+            //Console.WriteLine(processid);
         }
 
         static void test2()
