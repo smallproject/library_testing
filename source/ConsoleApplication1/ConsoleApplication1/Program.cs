@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApplication1.Image_folder;
 using ConsoleApplication1.Local;
 
 namespace ConsoleApplication1
@@ -33,10 +28,11 @@ namespace ConsoleApplication1
     {
 
         static SQL_experiments sqlcode = new SQL_experiments();
-        static void Main(string[] args)
+
+        private static void Main(string[] args)
         {
-            listenum_class minormain = new listenum_class();
-            minormain.main();
+            GetFilesClass getfiles = new GetFilesClass();
+            getfiles.Main();
         }
 
         static void test3()

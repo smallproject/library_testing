@@ -9,7 +9,7 @@ using System.Web;
 
 namespace ConsoleApplication1
 {
-    class Web
+    class Web_class
     {
         private void AddNewTab()
         {
