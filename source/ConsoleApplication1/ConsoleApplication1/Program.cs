@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleApplication1.Image_folder;
 using ConsoleApplication1.Local;
+using ConsoleApplication1.Random;
 
 namespace ConsoleApplication1
 {
@@ -31,8 +32,9 @@ namespace ConsoleApplication1
 
         private static void Main(string[] args)
         {
-            GetFilesClass getfiles = new GetFilesClass();
-            getfiles.Main();
+            _classRandom1 random1 = new _classRandom1();
+            random1.smallletters();
+            random1.bigletters();
         }
 
         static void test3()
