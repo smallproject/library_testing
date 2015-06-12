@@ -2,6 +2,7 @@
 using ConsoleApplication1.Image_folder;
 using ConsoleApplication1.Local;
 using ConsoleApplication1.Random;
+using ConsoleApplication1.Web;
 
 namespace ConsoleApplication1
 {
@@ -29,12 +30,12 @@ namespace ConsoleApplication1
     {
 
         static SQL_experiments sqlcode = new SQL_experiments();
+        static classXml xml = new classXml();
 
         private static void Main(string[] args)
         {
-            _classRandom1 random1 = new _classRandom1();
-            random1.smallletters();
-            random1.bigletters();
+            xml.test1();
+            xml.test2();
         }
 
         static void test3()
