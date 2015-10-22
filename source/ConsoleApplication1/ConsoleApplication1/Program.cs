@@ -3,6 +3,7 @@ using ConsoleApplication1.Image_folder;
 using ConsoleApplication1.Local;
 using ConsoleApplication1.Random;
 using ConsoleApplication1.Web;
+using ConsoleApplication1.Local.Learning_the_Basics;
 
 namespace ConsoleApplication1
 {
@@ -31,11 +32,13 @@ namespace ConsoleApplication1
 
         static SQL_experiments sqlcode = new SQL_experiments();
         static classXml xml = new classXml();
+        static Basic_Object_Manipulation basic_object = new Basic_Object_Manipulation();
 
         private static void Main(string[] args)
         {
-            xml.test1();
-            xml.test2();
+
+            basic_object.Main();
+
         }
 
         static void test3()

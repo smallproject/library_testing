@@ -52,6 +52,7 @@
     <Compile Include="Local\classProcess.cs" />
     <Compile Include="Local\getBasic.cs" />
     <Compile Include="Local\GetFilesClass.cs" />
+    <Compile Include="Local\Learning the Basics\Basic Object Manipulation.cs" />
     <Compile Include="Local\listenum_class.cs" />
     <Compile Include="Local\ProcessMonitor.cs" />
     <Compile Include="Local\_classFileWatcher.cs" />
